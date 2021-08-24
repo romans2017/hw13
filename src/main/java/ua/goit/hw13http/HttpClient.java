@@ -168,7 +168,7 @@ public class HttpClient {
                     return Map.entry(item, maxPostId);
                 })
                 .map(item -> {
-                    Comments comments = null;
+                    Comments comments = new Comments();
                     try {
                         comments = gson.fromJson(httpClient
                                 .send(HttpRequest
